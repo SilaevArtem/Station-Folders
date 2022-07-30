@@ -1,0 +1,21 @@
+{% extends 'folders/base.html' %}
+
+{% block title %}
+Мичуринский Проспект
+{% endblock %}
+
+{% block content %}
+    <h1>Добавить Файл</h1>
+    <form method = "POST" enctype="multipart/form-data" class="col-md-7">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.descrip }}
+        <br>
+        {{ form.datecomplited }}
+        <br> <br>
+        {{ form.file }}
+        <br><br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

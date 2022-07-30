@@ -1,0 +1,21 @@
+{% extends 'folders/base.html' %}
+
+{% block title %}
+Мичуринский Проспект
+{% endblock %}
+
+{% block content %}
+    <h1>Папка "Р"</h1>
+    {% if folder %}
+        {% for i in folder %}
+        <div class="alert alert-warning mt-2">
+            <a href="{% url 'detail' i.id %}"><h3>{{ i.title }}</h3></a>
+            <p>{{ i.descrip|truncatechars:70 }}</p>
+        </div>
+            {% endfor %}
+    {% else %}
+        <p>Записей Нет</p>
+    {% endif %}
+    <a href="{% url 'create' %}"><button type="button" class="btn btn-info">Добавить Файл</button></a>
+
+{% endblock %}

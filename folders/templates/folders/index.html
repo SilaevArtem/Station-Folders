@@ -1,0 +1,24 @@
+{% extends 'folders/base.html' %}
+
+{% block title %}
+Мичуринский Проспект
+{% endblock %}
+
+{% block content %}
+<h1 class="alert alert-info text-center mt-2">Выберите Папку</h1>
+<a href="{% url 'folderR' %}"><button type="button" class="btn btn-info col-md-2 ms-4" style="background: -webkit-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: -moz-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));">Папка "Р"</button></a>
+<a href="{% url 'folderI' %}"><button type="button" class="btn btn-info col-md-2 ms-4" style="background: -webkit-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: -moz-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));">Папка "И"</button></a>
+<a href="{% url 'folderU' %}"><button type="button" class="btn btn-info col-md-2 ms-4" style="background: -webkit-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: -moz-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));">Папка "У"</button></a>
+<a href="{% url 'folderDCH' %}"><button type="button" class="btn btn-info col-md-2 ms-4" style="background: -webkit-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: -moz-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));">Папка "ДЧ"</button></a>
+<a href="{% url 'folderD' %}"><button type="button" class="btn btn-info col-md-2 ms-4" style="background: -webkit-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: -moz-linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));
+    background: linear-gradient(45deg, rgb(246, 29, 29) 16%, rgb(255, 246, 182));">Папка "Д"</button></a>
+{% endblock %}

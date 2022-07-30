@@ -1,0 +1,20 @@
+{% extends 'folders/base.html' %}
+
+{% block title %}
+Мичуринский Проспект
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-warning mt-2">
+    <h1> Папка "{{ folder.title }}"</h1>
+    <h5>{{ folder.descrip }}</h5>
+    {% if folder.datecomplited %}
+    <p>Дата загрузки: {{ folder.datecomplited|date:'d m Y' }}</p>
+    {% endif %}
+    <h5><a href="{{ folder.file.url }}" class="btn btn-primary btn-sm">Скачать Файл</a></h5>
+    <form action="{% url 'delete' folder.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+    </form>
+</div>
+{% endblock %}
